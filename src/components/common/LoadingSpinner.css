@@ -1,0 +1,56 @@
+.loading-spinner {
+  display: inline-flex;
+  gap: 4px;
+}
+
+.spinner-circle {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: currentColor;
+  animation: spinner-bounce 1.4s infinite ease-in-out both;
+}
+
+.loading-spinner--sm .spinner-circle {
+  width: 6px;
+  height: 6px;
+}
+
+.loading-spinner--md .spinner-circle {
+  width: 8px;
+  height: 8px;
+}
+
+.loading-spinner--lg .spinner-circle {
+  width: 12px;
+  height: 12px;
+}
+
+.loading-spinner--primary {
+  color: var(--accent);
+}
+
+.loading-spinner--secondary {
+  color: var(--text-secondary);
+}
+
+.loading-spinner--white {
+  color: white;
+}
+
+.spinner-circle:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.spinner-circle:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+@keyframes spinner-bounce {
+  0%, 80%, 100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
