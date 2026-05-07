@@ -47,7 +47,11 @@ const App: React.FC = () => {
         filesData.forEach(file => addUploadedFile(file));
         reportsData.forEach(report => addReport(report));
         
-        success('Aplicação carregada com sucesso!');
+        // Remove repetitive toast - only show on first load
+        if (!sessionStorage.getItem('app-initialized')) {
+          success('Aplicação carregada com sucesso!');
+          sessionStorage.setItem('app-initialized', 'true');
+        }
       } catch (err) {
         const errorMessage = err instanceof Error ? err.message : 'Erro ao carregar dados';
         setError(errorMessage);
@@ -58,7 +62,7 @@ const App: React.FC = () => {
     };
 
     initializeApp();
-  }, [addUploadedFile, addReport, setLoading, setError, success, error]);
+  }, []); // Remove dependencies to prevent re-render loop
 
   const handleFileUpload = async (files: FileList) => {
     try {

@@ -3,7 +3,7 @@ import { useLocalStorage } from './useLocalStorage';
 import type { ViewType, UIState, UploadedFile, Report } from '../types';
 
 const initialState: UIState = {
-  darkMode: false,
+  darkMode: true,
   sidebarOpen: true,
   activeView: 'dashboard',
   loading: false,
