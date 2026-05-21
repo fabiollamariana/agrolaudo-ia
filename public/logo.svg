@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 100">
+  <rect width="420" height="100" rx="18" fill="#f1faf3"/>
+  <g transform="translate(18,16)">
+    <rect width="68" height="68" rx="16" fill="#dff2e3"/>
+    <path d="M34 57c0-12 6-23 19-32-14 1-25 9-32 22-3 6-3 10-3 10h16z" fill="#2f8f46"/>
+    <path d="M24 50c5-8 13-14 23-19" stroke="#1f6d35" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  <text x="102" y="48" fill="#184b31" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="700">AgroLaudo IA</text>
+  <text x="102" y="73" fill="#3f6d54" font-family="Inter, Arial, sans-serif" font-size="15">Relatórios Técnicos Ambientais</text>
+</svg>
