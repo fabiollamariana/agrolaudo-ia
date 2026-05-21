@@ -1,7 +1,7 @@
 :root {
   font-family: Inter, system-ui, -apple-system, sans-serif;
-  color: #1f3c30;
-  background: #eef5ef;
+  color: #d7e6dd;
+  background: radial-gradient(circle at top, #1b2a26 0%, #101a1f 100%);
 }
 
 * { box-sizing: border-box; }
@@ -9,45 +9,61 @@ body { margin: 0; }
 .container {
   max-width: 980px;
   margin: 2rem auto;
-  background: #fff;
-  border: 1px solid #dce9df;
+  background: #13201d;
+  border: 1px solid #294039;
   border-radius: 16px;
   padding: 1.5rem;
 }
 .landing { text-align: center; }
-.logo { max-width: 280px; width: 100%; height: auto; margin-bottom: 1rem; }
-.topbar { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; margin-bottom: 1rem; }
+.logo {
+  width: 92px;
+  height: 92px;
+  display: block;
+  margin: 0 auto 1rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+}
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
 .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
 .full { grid-column: 1 / -1; }
 label { display: flex; flex-direction: column; gap: 0.35rem; font-weight: 600; }
 input, select, textarea {
-  border: 1px solid #bcd2c2;
+  border: 1px solid #345149;
+  background: #0f1a18;
+  color: #d7e6dd;
   border-radius: 10px;
   padding: 0.6rem 0.7rem;
   font: inherit;
 }
 textarea { min-height: 90px; resize: vertical; }
 button {
-  background: #2f8f46;
-  color: #fff;
+  background: linear-gradient(135deg, #3b9b76, #4ea2c0);
+  color: #081313;
   border: none;
   border-radius: 10px;
   padding: 0.7rem 1rem;
   cursor: pointer;
+  font-weight: 700;
 }
-.uploads { border: 1px dashed #9ebea9; border-radius: 12px; padding: 1rem; }
+.uploads { border: 1px dashed #44685f; border-radius: 12px; padding: 1rem; }
 .upload-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.8rem; }
-.preview { border: 1px solid #dce9df; border-radius: 12px; padding: 1rem; }
+.preview { border: 1px solid #2f4740; border-radius: 12px; padding: 1rem; }
 .report-card p { white-space: pre-line; margin: 0.7rem 0; }
 .actions { display: flex; gap: 0.7rem; margin-top: 1rem; }
 
 @media (max-width: 760px) {
   .grid { grid-template-columns: 1fr; }
-  .topbar { flex-direction: column; }
+  .topbar { flex-direction: column; align-items: center; }
 }
 
 @media print {
-  body { background: #fff; }
-  .container { border: none; margin: 0; max-width: 100%; }
+  body { background: #fff; color: #111; }
+  .container { border: none; margin: 0; max-width: 100%; background: #fff; color: #111; }
   .actions, .topbar button { display: none; }
 }
