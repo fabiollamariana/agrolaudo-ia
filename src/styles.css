@@ -67,3 +67,7 @@ button {
   .container { border: none; margin: 0; max-width: 100%; background: #fff; color: #111; }
   .actions, .topbar button { display: none; }
 }
+
+.docx-preview {
+  min-height: 180px;
+}
